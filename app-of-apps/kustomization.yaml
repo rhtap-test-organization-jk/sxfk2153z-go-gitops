@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: sxfk2153z-go 
+  janus-idp.io/tekton: sxfk2153z-go
+  backstage.io/kubernetes-id: sxfk2153z-go
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: sxfk2153z-go
+resources:
+  - ci-tekton.yaml
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
